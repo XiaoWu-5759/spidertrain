@@ -78,19 +78,19 @@ path = root + '\\' + url.split('/')[-1]
 # 所谓绝对路径，是指从根目录算起来的路径。
 # 所谓相对路径，是指相对于当前工作目录来说的，当前工作目录就是指的程序锁在的目录。
 # 一般用.表示当前目录，用..表示父目录。
-try:
-    if not os.path.exists(root):
-        os.makedirs(root)
-    if not os.path.exists(path):
-        r = requests.get(url)
-        with open(path, 'wb') as f:
-            f.write(r.content)
-            f.close()
-            print("文件保存成功")
-    else:
-        print("文件已存在")
-except:
-    print("爬去失败")
+# try:
+#     if not os.path.exists(root):
+#         os.makedirs(root)
+#     if not os.path.exists(path):
+#         r = requests.get(url)
+#         with open(path, 'wb') as f:
+#             f.write(r.content)
+#             f.close()
+#             print("文件保存成功")
+#     else:
+#         print("文件已存在")
+# except:
+#     print("爬去失败")
 
 # IP地址归属地的自动查询
 # http://m.ip138.com/ip.asp?ip=ipaddress
